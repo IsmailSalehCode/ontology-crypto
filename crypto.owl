@@ -320,6 +320,24 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#exchangesKey"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyExchangeAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#generatesKey"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isHashing"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isPrinciple"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
