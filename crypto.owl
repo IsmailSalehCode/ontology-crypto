@@ -1,0 +1,813 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#"
+     xml:base="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#exchangesKey -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#exchangesKey">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyExchangeAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#generatesKey -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#generatesKey">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isAsymmetric -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isAsymmetric">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isSymmetric"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isSymmetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isDecryption -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isDecryption">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isEncryption -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isEncryption">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isHashing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isHashing">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isOfTypeMAC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isOfTypeMAC">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MessageAuthenticationCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isSymmetric -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isSymmetric">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#signsDigitalSignature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#signsDigitalSignature">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#verifiesDigitalSignature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DigitalSignatureAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#verifiesDigitalSignature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#verifiesDigitalSignature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DigitalSignatureAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#blockSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#blockSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Measured in bits.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#decryptionSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#decryptionSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>medium</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>slow</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#encryptionSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#encryptionSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>medium</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>slow</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#hashLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#hashLength">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Measured in bits.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isPrinciple -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isPrinciple">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#keyLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#keyLength">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Measured in bits.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#securityStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#securityStrength">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>medium</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>strong</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>very strong</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>weak</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Either weak, medium, strong or very strong.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#supportsTweakableBlockEncryption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#supportsTweakableBlockEncryption">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>In tweakable-block mode, a different key is used for each block of data being encrypted, which makes it more resistant to attacks such as differential cryptanalysis and linear cryptanalysis.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asymmetric encryption uses a mathematically related pair of keys for encryption and decryption: a public key and a private key. If the public key is used for encryption, then the related private key is used for decryption. If the private key is used for encryption, then the related public key is used for decryption.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block ciphers are designed to be symmetric, meaning that the same algorithm is used for both encryption and decryption. The decryption algorithm is the inverse function of the encryption algorithm, and it takes the ciphertext as input to produce the original plaintext using the same symmetric key.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#isPrinciple"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cryptographic method is a systematic and mathematical approach used to secure communication, protect information, ensure data integrity, and provide authentication. Cryptographic methods employ algorithms and protocols to transform plaintext (readable and understandable data) into ciphertext (encrypted data) and vice versa. The goal is to make the encrypted data secure against unauthorized access or tampering.</rdfs:comment>
+        <rdfs:comment>Cryptographic methods are applied in various areas, including:
+- Secure Communication: Encrypting data in transit to protect it from eavesdropping.
+- Data Integrity: Ensuring that data has not been tampered with during transmission.
+- Authentication: Verifying the identity of communicating parties.
+- Non-Repudiation: Preventing parties from denying their involvement in a communication or transaction.
+- Secure Storage: Encrypting data to protect it when stored on devices or servers.
+ 
+ The choice of a cryptographic method depends on the specific requirements of a given application, such as the desired security level, performance considerations, and the nature of the data being protected. Additionally, cryptographic methods are often used in combination to achieve a comprehensive and layered approach to security.</rdfs:comment>
+        <owl:versionInfo>1.0.0.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment>The complementary process to the encryption algorithm. It takes the ciphertext and the secret key as inputs and transforms the encrypted data back into its original plaintext form. The main goal of a decryption algorithm is to reverse the effects of the encryption process, restoring the original information from the ciphertext.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DigitalSignatureAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DigitalSignatureAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <rdfs:comment>A cryptographic technique used to provide authenticity, integrity, and non-repudiation to digital messages or documents. It involves the use of asymmetric-key cryptography, where a pair of cryptographic keys (public key and private key) is employed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment>A mathematical procedure or set of rules used to convert plaintext (unencrypted data) into ciphertext (encrypted data). The encryption process is typically controlled by a secret key that is known to both the sender and the recipient. The primary objective of an encryption algorithm is to obscure the original content of the plaintext in such a way that it becomes difficult for unauthorized parties to understand or extract meaningful information without the knowledge of the secret key.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hash function is any function that can be used to map data of arbitrary size to fixed-size values, though there are some hash functions that support variable length output. The values returned by a hash function are called hash values, hash codes, hash digests, digests, or simply hashes. The values are usually used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing.</rdfs:comment>
+        <rdfs:comment>A hash function typically has a concept known as the &quot;block size.&quot; The block size refers to the fixed-size input data that the hash function processes at each step of its computation. In other words, the input to the hash function is divided into blocks of a specific size, and the hash function processes each block individually.</rdfs:comment>
+        <rdfs:comment>Hashing functions are a distinct category in cryptography, and they are not subcategories of either symmetric or asymmetric cryptographic methods. Both symmetric and asymmetric cryptographic methods may utilize hashing functions for various purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyExchangeAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyExchangeAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment>This class contains cryptographic methods designed to facilitate the secure exchange of cryptographic keys between two parties over an insecure communication channel. The goal of a key exchange algorithm is to allow two parties to agree on a shared secret key without an eavesdropper being able to derive that key.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment>Here we have cryptographic processes that generate cryptographic keys for use in various cryptographic operations, such as encryption, decryption, digital signatures, and key exchange. The security of many cryptographic systems relies on the generation of strong and unpredictable cryptographic keys.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MessageAuthenticationCode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MessageAuthenticationCode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment>A cryptographic technique used to verify the integrity and authenticity of a message. It is a short piece of information generated using a secret key and appended to a message. The MAC allows the recipient of the message to verify that the received message has not been altered and was indeed sent by the entity claiming to be the sender.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <rdfs:comment>Stream ciphers are used for encrypting data in real-time. They use a pseudorandom keystream to encrypt the plaintext. The keystream is generated using a secret key and a feedback mechanism. The feedback mechanism can be a linear feedback shift register (LFSR), a Feistel network, or a Lai-Massey construction.
+
+Stream ciphers do not use hashing algorithms, which are used to create a fixed-size hash value from a variable-size message. Hashing algorithms are used for message authentication and integrity, while stream ciphers are used for encryption.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symmetric cryptography, known also as secret key cryptography, is the use of a single shared secret to share encrypted data between parties. Ciphers in this category are called symmetric because you use the same key to encrypt and to decrypt the data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AES">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <decryptionSpeed>high</decryptionSpeed>
+        <encryptionSpeed>high</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</keyLength>
+        <supportsTweakableBlockEncryption rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</supportsTweakableBlockEncryption>
+        <rdfs:comment>A widely used symmetric-key algorithm.</rdfs:comment>
+        <rdfs:comment>The original name of this individual is AES. However, I wanted to use this individual in order to represent a specific variant of AES with a key length of 256. So I used the annotation rdfs:label in order to rename the individual to AES-256.</rdfs:comment>
+        <rdfs:label>AES-256</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Authentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Authentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>Verifies the identity of parties involved in a communication.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AES"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AES"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</blockSize>
+        <securityStrength>strong</securityStrength>
+        <rdfs:comment>AES-256 is used here. The block size and key length are separate parameters in cryptographic algorithms.</rdfs:comment>
+        <rdfs:comment>key length is 256 =&gt; securityStrength = strong</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Blowfish"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Blowfish"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</blockSize>
+        <securityStrength>strong</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#BlockCipher"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Threefish"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Threefish"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</blockSize>
+        <securityStrength>very strong</securityStrength>
+        <rdfs:comment>key length exceeds 256 =&gt; security is very strong</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Blowfish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Blowfish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <decryptionSpeed>high</decryptionSpeed>
+        <encryptionSpeed>high</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</keyLength>
+        <supportsTweakableBlockEncryption rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</supportsTweakableBlockEncryption>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CBC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CBC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdfs:comment>Cipher Block Chaining</rdfs:comment>
+        <owl:deprecated>Sep 8, 2022 — Microsoft believes that it&apos;s no longer safe to decrypt data encrypted with the Cipher-Block-Chaining (CBC) mode of symmetric encryption.</owl:deprecated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CFB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CFB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdfs:comment>Cipher Feedback</rdfs:comment>
+        <owl:deprecated>Weak Key Dependencies: CFB encryption exhibits weak key dependencies, which means that the keystream generated for a particular block of plaintext is dependent on the key and the previous blocks of plaintext. This can lead to security vulnerabilities if the key is not strong enough or if the application does not properly handle error conditions.
+
+Stream Cipher Attacks: CFB encryption shares some similarities with stream ciphers, which are susceptible to certain types of attacks. For example, CFB encryption is vulnerable to ciphertext-only attacks, where an attacker can only observe ciphertext but not the corresponding plaintext. This can provide valuable information to the attacker and potentially allow them to break the encryption scheme.
+
+Alternatives to CFB:
+
+CTR Mode (CTR): As mentioned earlier, CTR mode is a more secure alternative to CFB that eliminates the weak key dependencies and provides stronger resistance to stream cipher attacks. CTR mode is widely used in modern cryptographic protocols and is considered to be a more secure and efficient mode of operation.
+
+Galois/Counter Mode (GCM): GCM, like CTR mode, is a more secure and efficient mode of operation that is also well-suited for authenticated encryption. GCM combines the concepts of CTR and a cryptographic hash function to provide strong security and message integrity.</owl:deprecated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Confusion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Confusion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>Confusion involves making the relationship between the plaintext, ciphertext, and the encryption key as complex as possible. In other words, it strives to obscure any statistical relationship between the input (plaintext) and the output (ciphertext).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Data_Integrity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Data_Integrity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>Ensures the accuracy and reliability of data throughout its lifecycle. The principle of data integrity in cryptography involves protecting data from unauthorized modification or corruption, ensuring that it remains intact and unaltered during storage, transmission, and processing.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Diffie-Hellman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Diffie-Hellman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyExchangeAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm"/>
+        <encryptionSpeed>medium</encryptionSpeed>
+        <securityStrength>strong</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Diffusion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Diffusion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>Diffusion focuses on spreading the influence of individual plaintext symbols over a large number of ciphertext symbols. It ensures that a change in one bit of the plaintext affects many bits in the ciphertext.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#ECB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#ECB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdfs:comment>Electronic Code Book</rdfs:comment>
+        <owl:deprecated>ECB mode leaks information about the plaintext because identical plaintext blocks produce identical ciphertext blocks. A ciphertext should never leak any information about the plaintext used to create it, so ECB mode is insecure and should never be used.</owl:deprecated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Entropy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Entropy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>A measure of unpredictability or randomness in a system. In cryptography, entropy is crucial for ensuring that generated values, such as cryptographic keys or random numbers, exhibit true randomness and are not easily predictable.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HMAC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HMAC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MessageAuthenticationCode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <isHashing rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA3-512"/>
+        <decryptionSpeed>high</decryptionSpeed>
+        <encryptionSpeed>high</encryptionSpeed>
+        <hashLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</hashLength>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</keyLength>
+        <securityStrength>very strong</securityStrength>
+        <rdfs:comment>The hash function used within HMAC typically does not have a specific &quot;blockSize&quot; parameter in the same way as a block cipher. HMAC operates as follows:
+1. Key Padding: If the key is shorter than the block size of the hash function, it is padded to match the block size.
+2. Inner Hash: The key is XORed with an inner padding value, and the result is hashed along with the message.
+3. Outer Hash: The hashed result from the inner step is XORed with an outer padding value, and the final result is hashed again.
+
+The security of HMAC relies on the underlying hash function&apos;s properties, such as collision resistance and preimage resistance. HMAC doesn&apos;t directly expose or specify the block size of the hash function it uses. Instead, it adapts to the block size of the chosen hash function.</rdfs:comment>
+        <rdfs:comment>Typically, the key length for HMAC would also be 512 bits to match the hash function&apos;s output length.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KerckhoffRule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KerckhoffRule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>A cryptographic system should remain secure even if everything about the system, except the key, is public knowledge. The security of a cryptographic system should rely on the secrecy of the key, not the secrecy of the algorithm.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MD5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#MD5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</blockSize>
+        <hashLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</hashLength>
+        <securityStrength>weak</securityStrength>
+        <rdfs:comment>MD5 is a weak hashing function because it has been shown to be vulnerable to collision attacks and preimage attacks.</rdfs:comment>
+        <owl:deprecated>On 31 December 2008, the CMU Software Engineering Institute concluded that MD5 was essentially &quot;cryptographically broken and unsuitable for further use&quot;. The weaknesses of MD5 have been exploited in the field, most infamously by the Flame malware in 2012.</owl:deprecated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Non-repudiation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Non-repudiation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CryptographicMethod"/>
+        <isPrinciple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPrinciple>
+        <rdfs:comment>Ensures that a party cannot deny the authenticity or origin of a message that it has sent. Digital signatures are often used to achieve non-repudiation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#OFB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#OFB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdfs:comment>Output Feedback</rdfs:comment>
+        <owl:deprecated>deprecated for modern cryptographic applications. While OFB was once a widely used mode of operation for block ciphers, it has fallen out of favor due to several security concerns and the availability of more secure alternatives.
+
+Security Concerns with OFB:
+
+Replay Attacks: OFB encryption is susceptible to replay attacks, where an attacker can capture a previously encrypted message and resend it at a later time, possibly with different content. This can lead to data corruption or unauthorized access to sensitive information.
+
+Chosen-plaintext Attacks: OFB encryption is vulnerable to chosen-plaintext attacks, where an attacker can manipulate the plaintext to observe the corresponding ciphertext. This can reveal information about the underlying block cipher and potentially allow the attacker to break the encryption scheme.
+
+Alternatives to OFB:
+
+Counter Mode (CTR): CTR is a more secure alternative to OFB that eliminates the replay attack vulnerability and provides stronger resistance to chosen-plaintext attacks. CTR mode is widely used in modern cryptographic protocols and is considered to be a secure and efficient mode of operation.
+
+Galois/Counter Mode (GCM): GCM combines the concepts of CTR and a cryptographic hash function to provide a more secure and efficient mode of operation. GCM is well-suited for authenticated encryption, which ensures both confidentiality and message integrity.</owl:deprecated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#AsymmetricCryptographicMethod"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#KeyGenerationAlgorithm"/>
+        <decryptionSpeed>medium</decryptionSpeed>
+        <encryptionSpeed>high</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2048</keyLength>
+        <supportsTweakableBlockEncryption rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</supportsTweakableBlockEncryption>
+        <rdfs:comment>The security strength of RSA (Rivest-Shamir-Adleman), a widely used asymmetric cryptographic algorithm, is determined by the length of the RSA key. The security strength is often expressed in terms of the size of the key in bits, and it is related to the difficulty of factoring the product of two large prime numbers, which forms the basis of RSA&apos;s security.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA_SHA256 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA_SHA256">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DigitalSignatureAlgorithm"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA"/>
+        <isHashing rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA-256"/>
+        <signsDigitalSignature rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA"/>
+        <verifiesDigitalSignature rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#RSA"/>
+        <securityStrength>strong</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA-256 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA-256">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</blockSize>
+        <hashLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</hashLength>
+        <securityStrength>strong</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA-512 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA-512">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</blockSize>
+        <hashLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</hashLength>
+        <securityStrength>very strong</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA3-512 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SHA3-512">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#HashingFunction"/>
+        <blockSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1088</blockSize>
+        <hashLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</hashLength>
+        <securityStrength>very strong</securityStrength>
+        <rdfs:comment>In the Keccak-based SHA-3 family, the block size is not explicitly fixed as in SHA-2. Instead, the Keccak sponge construction allows for variable-sized inputs and outputs.
+
+For SHA-3, the hash function can be configured with different capacity and bitrate values, which, in turn, influence the block size. The capacity and bitrate together determine the sponge&apos;s internal state size.
+
+For SHA-3-512:
+
+The capacity is 512 bits.
+The bitrate is 576 bits.
+The sum of the capacity and bitrate (512 + 576) gives the sponge&apos;s internal state size, and this is also the block size. Therefore, for SHA-3-512, the block size is 1088 bits.</rdfs:comment>
+        <rdfs:comment>SHA-3-512 is a variant of the SHA-3 cryptographic hash function that produces a 512-bit hash value. It is a member of the SHA-3 family, which was designed by Keccak, and it is not an extension or improvement of SHA-512.
+
+Comparing SHA-3-512 to SHA-512 involves considering the design principles and security properties of the SHA-3 family versus the SHA-2 family (which includes SHA-512).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#XOR"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#CFB"/>
+        <decryptionSpeed>high</decryptionSpeed>
+        <encryptionSpeed>high</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</keyLength>
+        <securityStrength>weak</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#StreamCipher"/>
+        <isDecryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#XOR"/>
+        <isEncryption rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#OFB"/>
+        <decryptionSpeed>slow</decryptionSpeed>
+        <encryptionSpeed>slow</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</keyLength>
+        <securityStrength>medium</securityStrength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Threefish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#Threefish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#EncryptionAlgorithm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#SymmetricCryptographicMethod"/>
+        <decryptionSpeed>medium</decryptionSpeed>
+        <encryptionSpeed>medium</encryptionSpeed>
+        <keyLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</keyLength>
+        <supportsTweakableBlockEncryption rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</supportsTweakableBlockEncryption>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#XOR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#XOR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#DecryptionAlgorithm"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
