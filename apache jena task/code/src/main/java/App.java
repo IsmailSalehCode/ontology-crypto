@@ -20,11 +20,12 @@ public class App {
                 + "PREFIX crypto: <http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#>"
                 + "PREFIX owl: <http://www.w3.org/2002/07/owl#>";
 
-        String SPARQL_query="ASK\n" +
-                "WHERE {\n" +
-                " ?hashingFunction rdf:type crypto:HashingFunction .\n" +
-                " ?hashingFunction crypto:securityStrength \"strong\" .\n" +
-                "}";
+        String SPARQL_query= """
+                ASK
+                WHERE {
+                 ?hashingFunction rdf:type crypto:HashingFunction .
+                 ?hashingFunction crypto:securityStrength "strong" .
+                }""";
         String full_query = SPARQL_prefixes+SPARQL_query;
 
         Query query = QueryFactory.create(full_query);
@@ -60,7 +61,7 @@ public class App {
             System.out.println("SELECT Query result: ");
             while (resultSet.hasNext()) {
                 QuerySolution solution = resultSet.nextSolution();
-                System.out.println( solution);
+                System.out.println(solution);
             }
         } finally {
             q.close();
