@@ -20,12 +20,10 @@ public class App {
                 + "PREFIX crypto: <http://www.semanticweb.org/ismail/ontologies/2024/0/crypto#>"
                 + "PREFIX owl: <http://www.w3.org/2002/07/owl#>";
 
-        String SPARQL_query="SELECT ?blockCipher ?encryption ?decryption ?securityStrength\n" +
+        String SPARQL_query="ASK\n" +
                 "WHERE {\n" +
-                " ?blockCipher rdf:type crypto:BlockCipher .\n" +
-                " ?blockCipher crypto:isEncryption ?encryption .\n" +
-                " ?blockCipher crypto:isDecryption ?decryption .\n" +
-                " ?blockCipher crypto:securityStrength ?securityStrength .\n" +
+                " ?hashingFunction rdf:type crypto:HashingFunction .\n" +
+                " ?hashingFunction crypto:securityStrength \"strong\" .\n" +
                 "}";
         String full_query = SPARQL_prefixes+SPARQL_query;
 
